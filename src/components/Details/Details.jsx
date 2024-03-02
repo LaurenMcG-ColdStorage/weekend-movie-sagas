@@ -1,15 +1,20 @@
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 function Details(){
 
+    const history = useHistory();
     const location = useLocation();
     const movie = location.state
-    console.log(movie);
+    
+    const handleNav = (event) => {
+        history.push({ pathname: '/' })
+    }
+
     return(
-        <div>
+        <div data-testid='movieItem'>
             <h3>{movie.title}</h3>
-            <img src={movie.poster}></img>
-            <p>{movie.description}</p>
+            <img data-testid="toList" src={movie.poster} onClick={(event) => handleNav(event)}></img>
+            <p data-testid="movieDetails">{movie.description}</p>
         </div>
     )
 };
