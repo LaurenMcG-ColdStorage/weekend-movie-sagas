@@ -11,10 +11,10 @@ function Details(){
     }
 
     return(
-        <div data-testid='movieItem'>
+        <div data-testid='movieDetails'>
             <h3>{movie.title}</h3>
             <img data-testid="toList" src={movie.poster} onClick={(event) => handleNav(event)}></img>
-            <p data-testid="movieDetails">{movie.description}</p>
+            <p>{movie.description}</p>
         </div>
     )
 };
