@@ -23,9 +23,11 @@ function* fetchAllMovies() {
     console.log('fetchAllMovies error:', error);
   }
 }
- function* fetchAllGenres() {
+ function* fetchAllGenres(action) {
   try {
-    const genreResponse = yield axios.get('/api/genres');
+    const movie = action.payload;
+    console.log(movie);
+    const genreResponse = yield axios.get(`/api/genres/${movie}`);
     yield put({
       type: 'SET_GENRES',
       payload: genreResponse.data
