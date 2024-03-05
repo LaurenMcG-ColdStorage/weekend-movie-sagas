@@ -17,7 +17,7 @@ function MovieList() {
   const handleClick = (movie) => {
     history.push({ pathname: '/details', state: movie}); //Navigates to details for the clicked movie
   }
-                       //Loop through movies, supply movie objects to Details for rendering
+                       //Loop through movies, renders them, and supplies movie objects to Details for rendering
   return (
     <main>
       <h2>Check Out Our Current Titles!</h2>
