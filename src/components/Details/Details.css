@@ -1,0 +1,7 @@
+p {
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+}

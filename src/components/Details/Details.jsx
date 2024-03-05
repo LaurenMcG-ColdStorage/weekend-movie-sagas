@@ -1,4 +1,6 @@
 import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import './Details.css';
+import Button from '@mui/material/Button';
 
 function Details(){
 
@@ -12,9 +14,17 @@ function Details(){
 
     return(
         <div data-testid='movieDetails'>
-            <h3>{movie.title}</h3>
-            <img data-testid="toList" src={movie.poster} onClick={(event) => handleNav(event)}></img>
+            <h2>{movie.title}</h2>
+            <img src={movie.poster}></img>
             <p>{movie.description}</p>
+            <Button data-testid="toList" 
+                    onClick={(event) => handleNav(event)}
+                    variant='contained'
+                    sx={{
+                        backgroundColor: '#7fffd4',
+                        color: '#686868',
+                        ':hover':{ backgroundColor: '#5dddb2'}
+                    }}>Back to Movie List</Button>
         </div>
     )
 };

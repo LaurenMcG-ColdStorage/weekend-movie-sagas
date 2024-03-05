@@ -1,3 +1,9 @@
 .App {
   text-align: center;
+  color: #dfdfdf;
+}
+h1 {
+  font-size: 6rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:#7fffd4;
 }

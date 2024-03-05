@@ -1,4 +1,14 @@
 .movies {
+    justify-content: center;
     display : flex;
     flex-wrap: wrap;
+    color: #dfdfdf;
+    background-color: #232323;
+}
+.movieElement {
+    max-width: 185px;
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid #686868;
+    border-radius: 10px;
 }
