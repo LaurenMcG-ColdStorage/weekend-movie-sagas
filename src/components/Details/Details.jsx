@@ -4,14 +4,14 @@ import Button from '@mui/material/Button';
 
 function Details(){
 
-    const history = useHistory();
-    const location = useLocation();
-    const movie = location.state
+    const history = useHistory();      //Lets us navigate
+    const location = useLocation();    //Lets us access data sent while navigating
+    const movie = location.state       //Stores accessed data
     
     const handleNav = (event) => {
-        history.push({ pathname: '/' })
+        history.push({ pathname: '/' }) //Go back to home on click
     }
-
+                                        //Renders out movie, with image, title, and details
     return(
         <div data-testid='movieDetails'>
             <h2>{movie.title}</h2>

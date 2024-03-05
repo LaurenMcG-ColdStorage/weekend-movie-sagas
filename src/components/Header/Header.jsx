@@ -1,6 +1,6 @@
 import './Header.css';
 
-function Header(){
+function Header(){          //Creates Header component, separated for styling efficiency
 
     return(
         <h1>Hooligan Flicks</h1>
